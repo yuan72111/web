@@ -1,0 +1,134 @@
+body{
+  margin:0;
+  font-family:"Segoe UI", sans-serif;
+  color:white;
+  background: radial-gradient(circle at top,#1e3a8a,#0f172a,#020617);
+}
+
+/* 背景粒子感 */
+body::before{
+  content:"";
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size:50px 50px;
+  opacity:0.05;
+  pointer-events:none;
+}
+
+/* 導覽列 */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:15px;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
+}
+
+nav a{
+  color:#38bdf8;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:white;
+  transform:scale(1.1);
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px;
+}
+
+.hero h1{
+  font-size:40px;
+  animation:fadeDown 1s ease;
+}
+
+.hero p{
+  color:#94a3b8;
+}
+
+/* 卡片 */
+.card{
+  max-width:900px;
+  margin:20px auto;
+  padding:25px;
+  border-radius:15px;
+  background:rgba(30,41,59,0.7);
+  backdrop-filter: blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+/* 頭像 */
+.avatar{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:3px solid #38bdf8;
+  object-fit:cover;
+}
+
+/* 技能條 */
+.skill{
+  margin:10px 0;
+}
+
+.bar{
+  height:10px;
+  background:#1e293b;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.bar div{
+  height:100%;
+  background:linear-gradient(90deg,#38bdf8,#60a5fa);
+  animation:load 2s ease;
+}
+
+@keyframes load{
+  from{width:0;}
+}
+
+/* grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+/* 按鈕 */
+.btn{
+  display:inline-block;
+  padding:10px 15px;
+  background:#38bdf8;
+  color:black;
+  border-radius:8px;
+  text-decoration:none;
+  margin-top:10px;
+}
+
+.btn:hover{
+  background:white;
+}
+
+/* 動畫 */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-20px);}
+  to{opacity:1; transform:translateY(0);}
+}
