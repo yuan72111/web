@@ -132,3 +132,146 @@ nav a:hover{
   from{opacity:0; transform:translateY(-20px);}
   to{opacity:1; transform:translateY(0);}
 }
+/* 讓卡片內的清單更好看 /
+.card ul {
+    text-align: left; / 保持條列式文字靠左 /
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+/ 突顯性格代碼 */
+.personality-code {
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #007bff;
+    margin: 15px 0;
+}
+
+.personality-code h3 {
+    margin: 0;
+    color: #007bff;
+}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人履歷 - 自傳</title>
+    <style>
+        /* 直接整合你提供的 CSS 樣式 */
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            color: white;
+            background: radial-gradient(circle at top, #1e3a8a, #0f172a, #020617);
+            min-height: 100vh;
+        }
+
+        /* 背景粒子感 */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(white 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* 導覽列 */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* 卡片設定 */
+        .card {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transition: 0.3s;
+            line-height: 1.6;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        h2 {
+            color: #38bdf8;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #38bdf8;
+        }
+
+        strong {
+            color: #38bdf8;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+
+        /* 性格標籤樣式 */
+        .holland-code {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.2);
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        </style>
+</head>
+<body>
